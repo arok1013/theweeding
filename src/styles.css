@@ -152,9 +152,9 @@ img {
 .hero h1 span {
   color: var(--almond);
   display: block;
-  font-size: 0.54em;
-  line-height: 0.72;
-  margin: 0.08em 0;
+  font-size: 0.68em;
+  line-height: 0.82;
+  margin: 0.16em 0 0.22em;
 }
 
 .landing p {
