@@ -11,6 +11,14 @@ const initialForm = {
   ucapan: ''
 };
 
+const emotes = ['❤️', '🤲', '✨', '🎉', '🥰', '💐'];
+const stickers = [
+  { label: 'Selamat!', value: '🎊 Selamat!' },
+  { label: 'Bahagia Selalu', value: '💍 Bahagia selalu' },
+  { label: 'Doa Terbaik', value: '🤍 Doa terbaik untuk kalian' },
+  { label: 'Sakinah', value: '🌙 Sakinah mawaddah warahmah' }
+];
+
 export default function RSVP({ onNewComment }) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState('idle');
@@ -18,6 +26,13 @@ export default function RSVP({ onNewComment }) {
 
   const update = (field, value) => {
     setForm((current) => ({ ...current, [field]: value }));
+  };
+
+  const appendUcapan = (value) => {
+    setForm((current) => ({
+      ...current,
+      ucapan: current.ucapan ? `${current.ucapan} ${value}` : value
+    }));
   };
 
   const handleSubmit = async (event) => {
@@ -87,6 +102,20 @@ export default function RSVP({ onNewComment }) {
           Ucapan & Doa
           <textarea value={form.ucapan} onChange={(event) => update('ucapan', event.target.value)} placeholder="Tulis doa terbaik Anda" rows="4" />
         </label>
+        <div className="emote-picker" aria-label="Tambahkan emote">
+          {emotes.map((emote) => (
+            <button type="button" key={emote} onClick={() => appendUcapan(emote)} aria-label={`Tambahkan ${emote}`}>
+              {emote}
+            </button>
+          ))}
+        </div>
+        <div className="sticker-picker" aria-label="Tambahkan sticker">
+          {stickers.map((sticker) => (
+            <button type="button" key={sticker.label} onClick={() => appendUcapan(sticker.value)}>
+              {sticker.value}
+            </button>
+          ))}
+        </div>
         {message && <p className={`form-message form-message--${status}`}>{message}</p>}
         <button className="primary-button rsvp__submit" type="submit" disabled={status === 'loading'}>
           <Send size={18} />

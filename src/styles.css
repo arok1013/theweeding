@@ -821,10 +821,63 @@ legend {
 }
 
 .rsvp__wide,
+.emote-picker,
+.sticker-picker,
 fieldset,
 .form-message,
 .rsvp__submit {
   grid-column: 1 / -1;
+}
+
+.emote-picker,
+.sticker-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.emote-picker button {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(99, 81, 71, 0.08);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1.25rem;
+  height: 2.65rem;
+  justify-content: center;
+  padding: 0;
+  transition: transform 180ms ease, background 180ms ease;
+  width: 2.65rem;
+}
+
+.emote-picker button:hover {
+  background: var(--almond);
+  transform: translateY(-2px);
+}
+
+.sticker-picker {
+  margin-top: -0.35rem;
+}
+
+.sticker-picker button {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(99, 81, 71, 0.08);
+  color: var(--umber);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 800;
+  min-height: 2.45rem;
+  padding: 0 0.9rem;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.sticker-picker button:hover {
+  background: var(--almond);
+  transform: translateY(-2px);
 }
 
 .rsvp__submit {
