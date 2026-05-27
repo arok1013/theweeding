@@ -38,7 +38,7 @@ export const weddingConfig = {
   },
   photos: [
     {
-      src: 'https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1200&q=80',
+      src: '/images/awalcerita.jpg',
       caption: 'Awal cerita yang sederhana'
     },
     {
