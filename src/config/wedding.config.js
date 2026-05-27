@@ -5,7 +5,7 @@ export const weddingConfig = {
     parentName: 'Putra Bapak Surya & Ibu Melati',
     birthInfo: 'Lahir di Jakarta, 12 Juni 2000',
     photo:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=82',
+      '/images/FianWR.png',
     instagram: 'https://instagram.com/'
   },
   bride: {
@@ -14,7 +14,7 @@ export const weddingConfig = {
     parentName: 'Putri Bapak Hasan & Ibu Kirana',
     birthInfo: 'Lahir di Bandung, 18 Februari 2001',
     photo:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=82',
+      '/images/noni.png',
     instagram: 'https://instagram.com/'
   },
   weddingDate: '2026-06-08T09:00:00+07:00',
