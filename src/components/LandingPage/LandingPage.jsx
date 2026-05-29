@@ -11,7 +11,7 @@ export default function LandingPage({ onOpen }) {
         <h1>
           {weddingConfig.groom.name} <span>&</span> {weddingConfig.bride.name}
         </h1>
-        <p>Kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberi doa restu.</p>
+        <p>Kami mengundang Bapak/Ibu/Saudara untuk hadir dan memberi doa restu.</p>
         <button className="primary-button" type="button" onClick={onOpen}>
           <MailOpen size={20} />
           Buka Undangan

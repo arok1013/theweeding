@@ -42,23 +42,23 @@ export const weddingConfig = {
       caption: 'Awal cerita yang sederhana'
     },
     {
-      src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
+      src: '/images/first.png',
       caption: 'Berjalan bersama'
     },
     {
-      src: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1200&q=80',
+      src: '/images/weeding.png',
       caption: 'Hari yang dinanti'
     },
     {
-      src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80',
+      src: '/images/weeding.png',
       caption: 'Janji untuk pulang'
     },
     {
-      src: 'https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=80',
+      src: '/images/weeding.png',
       caption: 'Doa keluarga'
     },
     {
-      src: 'https://images.unsplash.com/photo-1513278974582-3e1b4a4fa21e?auto=format&fit=crop&w=1200&q=80',
+      src: '/images/weeding.png',
       caption: 'Sampai nanti'
     }
   ],
@@ -69,7 +69,7 @@ export const weddingConfig = {
       description:
         'Pertemuan pertama yang sederhana menjadi awal dari obrolan panjang dan cerita yang tumbuh perlahan.',
       image:
-        'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=500&q=80'
+        '/images/first.jpg'
     },
     {
       title: 'Started Dating',
@@ -77,7 +77,7 @@ export const weddingConfig = {
       description:
         'Dari saling mengenal, kami belajar saling menjaga dan memilih berjalan bersama.',
       image:
-        'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=500&q=80'
+        '/images/first.png'
     },
     {
       title: 'Engagement',
@@ -93,13 +93,13 @@ export const weddingConfig = {
       description:
         'Hari saat doa, keluarga, dan cinta menjadi satu dalam janji untuk saling pulang.',
       image:
-        'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=500&q=80'
+        '/images/weeding.png'
     }
   ],
   preweddingVideo: {
     title: 'Video Prewedding',
     description: 'Sepenggal cerita kami sebelum hari bahagia.',
-    embedUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    embedUrl: 'https://youtu.be/Xu1wA7CfhQg?si=XnEdmfuYyaK_juxC'
   },
   quote:
     'Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup agar kamu merasa tenteram kepadanya.',
