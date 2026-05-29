@@ -99,7 +99,7 @@ export const weddingConfig = {
   preweddingVideo: {
     title: 'Video Prewedding',
     description: 'Sepenggal cerita kami sebelum hari bahagia.',
-    embedUrl: 'https://youtu.be/Xu1wA7CfhQg?si=XnEdmfuYyaK_juxC'
+    embedUrl: 'https://www.youtube.com/embed/Xu1wA7CfhQg'
   },
   quote:
     'Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup agar kamu merasa tenteram kepadanya.',
