@@ -2,12 +2,14 @@ import React from 'react';
 const initial = (name) => (name || '?').trim().charAt(0).toUpperCase();
 
 const formatTime = (timestamp) =>
-  new Intl.DateTimeFormat('id-ID', {
+  `${new Intl.DateTimeFormat('id-ID', {
     day: 'numeric',
-    month: 'short',
+    month: 'long',
+    year: 'numeric',
     hour: '2-digit',
-    minute: '2-digit'
-  }).format(new Date(timestamp || Date.now()));
+    minute: '2-digit',
+    timeZone: 'Asia/Jakarta'
+  }).format(new Date(timestamp || Date.now()))} WIB`;
 
 export default function Comments({ comments, status }) {
   return (
