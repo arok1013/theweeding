@@ -38,7 +38,7 @@ export default function Dashboard() {
 
   return (
     <main>
-      <BackgroundMusic volume={isVideoPlaying ? 0.08 : 0.55} />
+      <BackgroundMusic paused={isVideoPlaying} volume={0.55} />
       <Hero />
       <Countdown targetDate={weddingConfig.weddingDate} />
       <CoupleProfile />
