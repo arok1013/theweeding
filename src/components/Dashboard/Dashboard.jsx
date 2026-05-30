@@ -9,14 +9,13 @@ import EventDetails from '../EventDetails/EventDetails.jsx';
 import Footer from '../Footer/Footer.jsx';
 import Gallery from '../Gallery/Gallery.jsx';
 import Hero from '../Hero/Hero.jsx';
-import InviteShare from '../InviteShare/InviteShare.jsx';
 import LoveStory from '../LoveStory/LoveStory.jsx';
 import Maps from '../Maps/Maps.jsx';
 import PreweddingVideo from '../PreweddingVideo/PreweddingVideo.jsx';
 import RSVP from '../RSVP/RSVP.jsx';
 import { useCommentPolling } from '../../hooks/useCommentPolling.js';
 
-export default function Dashboard({ guestName = '' }) {
+export default function Dashboard() {
   const commentsState = useCommentPolling();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
@@ -41,7 +40,6 @@ export default function Dashboard({ guestName = '' }) {
     <main>
       <BackgroundMusic volume={isVideoPlaying ? 0.08 : 0.55} />
       <Hero />
-      <InviteShare initialGuestName={guestName} />
       <Countdown targetDate={weddingConfig.weddingDate} />
       <CoupleProfile />
       <LoveStory />

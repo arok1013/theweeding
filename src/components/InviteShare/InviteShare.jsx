@@ -4,7 +4,7 @@ import { weddingConfig } from '../../config/wedding.config.js';
 
 const cleanPhone = (value) => value.replace(/[^\d]/g, '').replace(/^0/, '62');
 
-const getBaseUrl = () => `${window.location.origin}${window.location.pathname}`;
+const getInviteBaseUrl = () => `${window.location.origin}/`;
 
 export default function InviteShare({ initialGuestName = '' }) {
   const [recipientName, setRecipientName] = useState(initialGuestName);
@@ -13,7 +13,7 @@ export default function InviteShare({ initialGuestName = '' }) {
 
   const trimmedName = recipientName.trim();
   const inviteUrl = useMemo(() => {
-    const url = new URL(getBaseUrl());
+    const url = new URL(getInviteBaseUrl());
     if (trimmedName) {
       url.searchParams.set('to', trimmedName);
     }
@@ -44,7 +44,7 @@ export default function InviteShare({ initialGuestName = '' }) {
   };
 
   return (
-    <section className="section invite-share fade-up">
+    <section className="section invite-share">
       <div className="invite-share__header">
         <div>
           <span className="eyebrow">Dashboard Undangan</span>

@@ -332,6 +332,11 @@ cite {
   transform: translateY(0);
 }
 
+.share-dashboard {
+  min-height: 100vh;
+  padding-top: clamp(1rem, 3vw, 2rem);
+}
+
 .invite-share {
   max-width: 980px;
   padding-bottom: clamp(2rem, 5vw, 4rem);
