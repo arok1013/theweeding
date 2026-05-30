@@ -131,6 +131,8 @@ img {
 
 .landing__content {
   color: var(--white);
+  display: grid;
+  justify-items: center;
   max-width: 46rem;
   padding: 2rem;
   position: relative;
@@ -140,11 +142,27 @@ img {
 }
 
 .landing .eyebrow {
+  align-items: center;
   color: var(--white);
-  display: block;
-  font-size: clamp(1.18rem, 3.8vw, 1.55rem);
-  margin-bottom: clamp(1.2rem, 3vw, 2rem);
+  display: inline-grid;
+  font-size: clamp(0.82rem, 1.7vw, 1rem);
+  font-weight: 800;
+  gap: 0.55rem;
+  grid-template-columns: 3.2rem auto 3.2rem;
+  margin-bottom: clamp(0.65rem, 1.8vw, 1.2rem);
+  opacity: 0.96;
   text-shadow: 0 2px 12px rgba(99, 81, 71, 0.45);
+}
+
+.landing .eyebrow::before,
+.landing .eyebrow::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9));
+  content: "";
+  height: 1px;
+}
+
+.landing .eyebrow::after {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9), transparent);
 }
 
 .landing h1,
@@ -160,6 +178,7 @@ img {
 .landing h1 {
   font-size: clamp(5.1rem, 13vw, 10rem);
   margin-top: 0;
+  margin-bottom: clamp(1rem, 2.6vw, 1.75rem);
 }
 
 .landing h1 span,
@@ -1327,17 +1346,19 @@ fieldset,
 
   .landing__content {
     padding: 1.35rem;
-    transform: translateY(-1rem);
+    transform: translateY(-0.65rem);
   }
 
   .landing .eyebrow {
-    font-size: clamp(1.22rem, 5.2vw, 1.48rem);
-    margin-bottom: 1.45rem;
+    font-size: clamp(0.72rem, 3.2vw, 0.88rem);
+    gap: 0.45rem;
+    grid-template-columns: 2.15rem auto 2.15rem;
+    margin-bottom: 0.65rem;
   }
 
   .landing h1 {
-    font-size: clamp(4.8rem, 26vw, 7rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(4.9rem, 27vw, 7.35rem);
+    margin-bottom: 1.15rem;
   }
 
   .hero {

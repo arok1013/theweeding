@@ -9,7 +9,7 @@ export default function LandingPage({ guestName, onOpen }) {
     <main className="landing">
       <div className="landing__image" aria-hidden="true" />
       <section className="landing__content">
-        <span className="eyebrow">Undangan Pernikahan</span>
+        <span className="eyebrow">THE WEDDING OF</span>
         <h1>
           {weddingConfig.groom.name} <span>&</span> {weddingConfig.bride.name}
         </h1>
