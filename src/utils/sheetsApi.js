@@ -4,7 +4,7 @@ const endpoint = () => weddingConfig.sheetsEndpoint;
 
 export async function submitRSVP(payload) {
   if (!endpoint()) {
-    throw new Error('SHEETS_ENDPOINT belum dikonfigurasi di .env');
+    throw new Error('VITE_SHEETS_ENDPOINT belum dikonfigurasi di .env');
   }
 
   const body = {

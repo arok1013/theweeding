@@ -332,6 +332,87 @@ cite {
   transform: translateY(0);
 }
 
+.invite-share {
+  max-width: 980px;
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.invite-share__header {
+  align-items: end;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.invite-share__header h2 {
+  margin-bottom: 0;
+}
+
+.invite-share__preview {
+  min-height: 2.8rem;
+}
+
+.invite-share__panel {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+.invite-share__wide,
+.invite-share__actions {
+  grid-column: 1 / -1;
+}
+
+.input-with-icon,
+.copy-field {
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+  padding: 0 0.9rem;
+}
+
+.input-with-icon svg,
+.copy-field svg {
+  color: var(--umber);
+  flex: 0 0 auto;
+}
+
+.input-with-icon input,
+.copy-field input {
+  border: 0;
+  margin-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.copy-field {
+  padding-right: 0.25rem;
+}
+
+.copy-field .icon-button {
+  background: var(--almond);
+  box-shadow: none;
+  flex: 0 0 auto;
+  height: 2.45rem;
+  width: 2.45rem;
+}
+
+.invite-share__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.invite-share__wa {
+  background: #2f6f55;
+}
+
 .countdown {
   text-align: center;
 }
@@ -345,6 +426,7 @@ cite {
 .count-card,
 .event-card,
 .map-panel,
+.invite-share__panel,
 .rsvp__form,
 .comment-card {
   background: rgba(255, 255, 255, 0.72);
@@ -1020,8 +1102,14 @@ fieldset,
   .events__grid,
   .maps__grid,
   .gallery__grid,
+  .invite-share__panel,
   .rsvp__form {
     grid-template-columns: 1fr;
+  }
+
+  .invite-share__header {
+    align-items: start;
+    display: grid;
   }
 
   .countdown__grid {

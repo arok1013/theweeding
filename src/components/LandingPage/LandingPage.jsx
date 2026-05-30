@@ -2,7 +2,11 @@ import React from 'react';
 import { Heart, MailOpen } from 'lucide-react';
 import { weddingConfig } from '../../config/wedding.config.js';
 
-export default function LandingPage({ onOpen }) {
+export default function LandingPage({ guestName, onOpen }) {
+  const invitationText = guestName
+    ? `Kami mengundang Bapak/Ibu/Saudara/i ${guestName} untuk hadir dan memberi doa restu.`
+    : 'Kami mengundang Bapak/Ibu/Saudara untuk hadir dan memberi doa restu.';
+
   return (
     <main className="landing">
       <div className="landing__image" aria-hidden="true" />
@@ -11,7 +15,7 @@ export default function LandingPage({ onOpen }) {
         <h1>
           {weddingConfig.groom.name} <span>&</span> {weddingConfig.bride.name}
         </h1>
-        <p>Kami mengundang Bapak/Ibu/Saudara untuk hadir dan memberi doa restu.</p>
+        <p>{invitationText}</p>
         <button className="primary-button" type="button" onClick={onOpen}>
           <MailOpen size={20} />
           Buka Undangan

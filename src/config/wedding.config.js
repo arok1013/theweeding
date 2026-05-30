@@ -104,7 +104,10 @@ export const weddingConfig = {
   quote:
     'Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup agar kamu merasa tenteram kepadanya.',
   quoteSource: 'QS. Ar-Rum: 21',
-  sheetsEndpoint: import.meta.env.VITE_SHEETS_ENDPOINT || import.meta.env.REACT_APP_SHEETS_ENDPOINT || ''
+  sheetsEndpoint:
+    import.meta.env.VITE_SHEETS_ENDPOINT ||
+    import.meta.env.REACT_APP_SHEETS_ENDPOINT ||
+    'https://script.google.com/macros/s/AKfycbw1HvPstt76o6eR7Skz2dcQOjrt2wUa_S6aXKVysAd2MhB2NELw95B4tjR8DWsIx2vyvA/exec'
 };
 
 export const formatDate = (date) =>
