@@ -21,13 +21,22 @@ export default function InviteShare({ initialGuestName = '' }) {
   }, [trimmedName]);
 
   const message = useMemo(() => {
-    const recipient = trimmedName || 'Bapak/Ibu/Saudara/i';
+    const recipient = trimmedName || '(nama tamu undangan)';
     return [
-      'Assalamu\'alaikum Wr. Wb.',
+      'Assalamu\'alaikum Warahmatullahi Wabarakatuh',
       '',
-      `Dengan hormat, kami mengundang ${recipient} untuk hadir dan memberi doa restu pada pernikahan ${weddingConfig.groom.name} & ${weddingConfig.bride.name}.`,
+      'Dengan penuh kebahagiaan dan kerendahan hati, kami menyampaikan undangan istimewa kepada:',
+      recipient,
       '',
-      inviteUrl
+      'Merupakan suatu kehormatan bagi kami untuk mengundang Bapak/Ibu/Saudara/i agar berkenan hadir menyaksikan dan memberikan doa restu pada momen sakral pernikahan:',
+      `${weddingConfig.groom.name} & ${weddingConfig.bride.name}`,
+      '',
+      'Kehadiran dan restu Anda adalah hadiah terindah bagi keluarga kami.',
+      '',
+      '📩 Informasi lengkap mengenai waktu, tempat, dan rangkaian acara dapat dilihat melalui undangan digital berikut:',
+      `👉 ${inviteUrl}`,
+      '',
+      'Atas perhatian dan kehadiran Bapak/Ibu/Saudara/i, kami mengucapkan terima kasih yang sebesar-besarnya.'
     ].join('\n');
   }, [inviteUrl, trimmedName]);
 
